@@ -1,0 +1,7 @@
+FROM n8nio/n8n:2.29.10
+
+ENV DB_TYPE=postgresdb \
+    DB_POSTGRESDB_PORT=5432 \
+    DB_POSTGRESDB_DATABASE=n8n \
+    N8N_PROTOCOL=https \
+    N8N_PORT=5678
