@@ -19,10 +19,11 @@ ENV SERVER_TYPE=http \
     CACHE_REDIS_SAVE_INSTANCES=false \
     DEL_INSTANCE=false \
     LANGUAGE=en \
-    S3_ENABLED=true \
+    S3_ENABLED=false \
     S3_PORT=443 \
-    S3_USE_SSL=true \
-    S3_REGION=auto \
-    S3_ENDPOINT=t3.storageapi.dev
-# S3_ENDPOINT is the Railway bucket endpoint HOST (no scheme). Override the
-# service variable if your bucket's credentials show a different host.
+    S3_USE_SSL=true
+# S3 is off by default: Evolution's minio client calls listBuckets/makeBucket
+# at boot, which Railway's single-bucket-scoped credentials can't satisfy.
+# Media persists in Postgres instead. To use external S3-compatible storage,
+# set S3_ENABLED=true plus S3_ENDPOINT (host, no scheme), S3_ACCESS_KEY,
+# S3_SECRET_KEY, S3_BUCKET, S3_REGION as service variables.
