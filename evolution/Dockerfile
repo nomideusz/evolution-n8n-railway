@@ -18,4 +18,11 @@ ENV SERVER_TYPE=http \
     CACHE_REDIS_PREFIX_KEY=evolution \
     CACHE_REDIS_SAVE_INSTANCES=false \
     DEL_INSTANCE=false \
-    LANGUAGE=en
+    LANGUAGE=en \
+    S3_ENABLED=true \
+    S3_PORT=443 \
+    S3_USE_SSL=true \
+    S3_REGION=auto \
+    S3_ENDPOINT=t3.storageapi.dev
+# S3_ENDPOINT is the Railway bucket endpoint HOST (no scheme). Override the
+# service variable if your bucket's credentials show a different host.
