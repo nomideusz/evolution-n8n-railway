@@ -1,6 +1,6 @@
 # Deploy and Host Evolution API + n8n on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/evolution-n8n?utm_medium=integration&utm_source=button&utm_campaign=evolution-n8n)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/evolution-n8n?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=evolution-n8n)
 
 [Evolution API](https://evolution-api.com/) is an open-source WhatsApp REST API: connect numbers via QR code or the official WhatsApp Business API, send and receive messages, media, buttons, and group events — and [n8n](https://n8n.io/) is the workflow automation platform that turns those messages into bots, funnels, and integrations with 400+ services. Together they are the standard self-hosted WhatsApp automation stack.
 
