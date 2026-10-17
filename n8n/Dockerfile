@@ -1,4 +1,4 @@
-FROM n8nio/n8n:2.29.10
+FROM n8nio/n8n:2.43.7
 
 ENV DB_TYPE=postgresdb \
     DB_POSTGRESDB_PORT=5432 \
