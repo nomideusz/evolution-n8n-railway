@@ -23,7 +23,7 @@ This template runs the full automation stack as four Railway services wired over
 
 - [Evolution API documentation](https://doc.evolution-api.com/)
 - [n8n documentation](https://docs.n8n.io/)
-- [Template source on GitHub](https://github.com/nomideusz/evolution-n8n-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/evolution-n8n)
 
 ### Implementation Details
 
