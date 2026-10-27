@@ -34,7 +34,7 @@ Service map:
 | Service | Image | Role |
 |---|---|---|
 | evolution | `evoapicloud/evolution-api:v2.3.7` | WhatsApp REST API + manager UI, public domain |
-| n8n | `n8nio/n8n:2.43.7` | Workflow automation, public domain, volume at `/home/node/.n8n` |
+| n8n | `n8nio/n8n:2.44.7` | Workflow automation, public domain, volume at `/home/node/.n8n` |
 | postgres | `postgres:16-alpine` | Both apps' data (`evolution` + `n8n` DBs), on a volume |
 | redis | `redis:7-alpine` | Evolution cache (instance state, sessions) |
 
