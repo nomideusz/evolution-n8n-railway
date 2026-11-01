@@ -1,5 +1,5 @@
 # upgrade: npm n8n
-FROM n8nio/n8n:2.45.4
+FROM n8nio/n8n:2.45.7
 
 ENV DB_TYPE=postgresdb \
     DB_POSTGRESDB_PORT=5432 \
