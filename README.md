@@ -34,7 +34,7 @@ Service map:
 | Service | Image | Role |
 |---|---|---|
 | evolution | `ghcr.io/two-workspaces/evolution` (Evolution API v2.3.7, [source](https://github.com/two-workspaces/evolution)) | WhatsApp REST API + manager UI, public domain |
-| n8n | `n8nio/n8n:2.46.7` | Workflow automation, public domain, volume at `/home/node/.n8n` |
+| n8n | `n8nio/n8n:2.47.3` | Workflow automation, public domain, volume at `/home/node/.n8n` |
 | postgres | `postgres:16-alpine` | Both apps' data (`evolution` + `n8n` DBs), on a volume |
 | redis | `redis:7-alpine` | Evolution's cache and WhatsApp encryption keys, append-only file on a volume at `/data` |
 
