@@ -6,7 +6,7 @@
 
 ## About Hosting Evolution API + n8n
 
-This template runs the full automation stack as four Railway services wired over private networking: Evolution API v2.3.7 and n8n each with their own public domain, plus one PostgreSQL instance serving both apps (separate `evolution` and `n8n` databases via init script) and Redis, which holds WhatsApp's encryption keys on its own volume. Messages, chats and instance credentials persist in Postgres, so a paired number survives restarts and redeploys of every service (no re-pairing), and the Redis URI carries `?family=0` — the fix for the ioredis IPv6 incompatibility with Railway's private networking that breaks naive templates. Open Evolution's `/manager` UI with your generated API key, pair a number, then point a webhook at an n8n workflow.
+This template runs the full automation stack as four Railway services wired over private networking: Evolution API v2.3.8 and n8n each with their own public domain, plus one PostgreSQL instance serving both apps (separate `evolution` and `n8n` databases via init script) and Redis, which holds WhatsApp's encryption keys on its own volume. Messages, chats and instance credentials persist in Postgres, so a paired number survives restarts and redeploys of every service (no re-pairing), and the Redis URI carries `?family=0` — the fix for the ioredis IPv6 incompatibility with Railway's private networking that breaks naive templates. Open Evolution's `/manager` UI with your generated API key, pair a number, then point a webhook at an n8n workflow.
 
 ## Common Use Cases
 
@@ -33,8 +33,8 @@ Service map:
 
 | Service | Image | Role |
 |---|---|---|
-| evolution | `ghcr.io/two-workspaces/evolution` (Evolution API v2.3.7, [source](https://github.com/two-workspaces/evolution)) | WhatsApp REST API + manager UI, public domain |
-| n8n | `n8nio/n8n:2.47.7` | Workflow automation, public domain, volume at `/home/node/.n8n` |
+| evolution | `ghcr.io/two-workspaces/evolution` (Evolution API v2.3.8, [source](https://github.com/two-workspaces/evolution)) | WhatsApp REST API + manager UI, public domain |
+| n8n | `n8nio/n8n:2.48.8` | Workflow automation, public domain, volume at `/home/node/.n8n` |
 | postgres | `postgres:16-alpine` | Both apps' data (`evolution` + `n8n` DBs), on a volume |
 | redis | `redis:7-alpine` | Evolution's cache and WhatsApp encryption keys, append-only file on a volume at `/data` |
 

@@ -1,10 +1,10 @@
-# Built in github.com/two-workspaces/evolution: Evolution API v2.3.7 behind a start script that
+# Built in github.com/two-workspaces/evolution: Evolution API v2.3.8 behind a start script that
 # waits for Postgres and Redis, refuses the image's public default API key, restarts the API
 # if it dies, and serves the manager's logo locally (upstream's logo URLs answer 404).
 # The upstream version pin lives in that repo. New deploys of the template pull this image
 # directly; this Dockerfile keeps deployments that build from this repo on the same image.
 # upgrade: skip
-FROM ghcr.io/two-workspaces/evolution:065f2b1
+FROM ghcr.io/two-workspaces/evolution:98eea9e
 
 # Messages, chats and the instance credentials live in Postgres (DATABASE_SAVE_DATA_*).
 # WhatsApp's encryption keys live in Redis, so Redis needs a volume at /data: without one,
